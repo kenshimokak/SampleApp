@@ -2,7 +2,7 @@
 //  SampleAppApp.swift
 //  SampleApp
 //
-//  Created by Mohammad Reza Rezaei on 2022-04-26.
+//  Created by Reza on 2022-04-26.
 //
 
 import SwiftUI

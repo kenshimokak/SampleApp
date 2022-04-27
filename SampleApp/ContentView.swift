@@ -2,15 +2,34 @@
 //  ContentView.swift
 //  SampleApp
 //
-//  Created by Mohammad Reza Rezaei on 2022-04-26.
+//  Created by Reza on 2022-04-26.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "person")
+                    }
+                StoryView()
+                    .tabItem {
+                        Label("Story", systemImage: "book")
+                    }
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+                FunFactsView()
+                    .tabItem {
+                        Label("Func", systemImage: "hand.thumbsup")
+                    }
+            }
+            .font(.title)
+        }.ignoresSafeArea(.all)
     }
 }
 
@@ -19,3 +38,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
