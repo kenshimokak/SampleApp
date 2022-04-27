@@ -11,20 +11,26 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Text("All About")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
+            Spacer()
+                Text("All About")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .padding()
 
-            Image(information.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(10)
-                .padding(40)
+                Image(information.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                    .padding(40)
 
-            Text(information.name)
+                Text(information.name)
                 .font(.title)
+                .foregroundColor(Color.white)
+            Spacer()
         }
+        .background(Color.yellow).ignoresSafeArea(.all)
+
     }
     
 }
